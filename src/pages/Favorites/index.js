@@ -10,7 +10,9 @@ function Favorites (){
     },[])
     return (
         <div className='movies'> 
+            <h1>Meus Filmes</h1>
             <ul>
+               
                 {movies.map((movie)=>{
                     return(
                         <li key={movie.id}>
