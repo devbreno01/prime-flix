@@ -1,26 +1,29 @@
 import {useEffect, useState} from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import api from "../../services/api";
-
+import { toast } from 'react-toastify';
 import './movie-info.css'; 
+
+
 
 function Movie()
 {
     const { id } = useParams(); 
+
     let [movie,setMovie] = useState([]); 
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+
     useEffect(()=>{
         async function loadMovieById() {
-         await api.get(`movie/${id}`,{
+            await api.get(`movie/${id}`,{
                 params:{
                     api_key: '9c6eb96fb951f52cf16a4cc792ea682d', 
                     language : 'pt-BR'
                 }
-            })
-            .then((response)=>{
+            }).then((response)=>{
                  setMovie(response.data);
-                 console.log(response.data)
+                 //console.log(response.data)
                  setLoading(false); 
             })
             .catch(() => {
@@ -33,8 +36,9 @@ function Movie()
         }
 
         loadMovieById(); 
-    },[navigate,id])
-    //dependencias ou hooks utilizados dentro do useEffect a gente sempre passa no segundo parametro 
+    },[navigate,id]) //dependencias ou hooks utilizados dentro do useEffect a gente sempre passa no segundo parametro 
+    
+
     function formatData(date){
          if (!date) 
             return '';
@@ -51,15 +55,14 @@ function Movie()
         let hasMovie = savedMovies.some((savedMovie)=> savedMovie.id === movie.id);
 
         if(hasMovie) {
-            alert("FILME JÁ ESTÁ NA LISTA")
+            toast.warn("Filme já está na lista");
             return; 
         }
 
         savedMovies.push(movie);
-        let teste = JSON.stringify(savedMovies);
-       
+
         localStorage.setItem("@primeflix", JSON.stringify(savedMovies))
-        alert("FILME SALVO"); 
+        toast.success("Filme salvo com sucesso");
 
     }
      return(

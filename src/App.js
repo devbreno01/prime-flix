@@ -1,8 +1,11 @@
 import RoutesApp  from "./routes";
-// api key = 9c6eb96fb951f52cf16a4cc792ea682d
+import { ToastContainer } from 'react-toastify'
+//import 'react-toastify/dist/ReactToastify.css'
+
 function App() {
   return (
     <div className="App">
+      <ToastContainer autoClose={3000}/>
       <RoutesApp/>
     </div>
   );
