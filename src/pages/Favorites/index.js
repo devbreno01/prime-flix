@@ -33,7 +33,7 @@ function Favorites (){
                             <span>{movie.title}</span>
                             <div>
                                 <Link to={`/movie/${movie.id}`}>Ver Detalhes</Link>
-                                <button onClick={()=> deleteMovie(movie.id)}>Excluir</button>
+                                <button onClick={()=> deleteMovie(movie.id)} className='delete'>Excluir</button>
                             </div>
                         </li>
                     )

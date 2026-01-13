@@ -9,10 +9,9 @@ function Home()
 {
     const [movies,setMovies] = useState([]); 
     const [loading,setLoading] = useState(true); 
+
     useEffect(()=>{
-        async function loadMovies()
-        {
-            //movie/now_playing?api_key=9c6eb96fb951f52cf16a4cc792ea682d&language=pt-BR
+        async function loadMovies(){
             const response = await api.get('movie/now_playing',{
                 params:{    
                     api_key: '9c6eb96fb951f52cf16a4cc792ea682d', 
@@ -20,10 +19,8 @@ function Home()
                     page: 1
                 }
             })
-
-            //console.log(response.data.results.slice(0,10)); 
-
-            setMovies(response.data.results.slice(0,10)); 
+            
+            setMovies(response.data.results.slice(0,50)); 
             setLoading(false);
         }
 

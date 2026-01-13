@@ -1,6 +1,6 @@
 .list-movies{
    width: 800px;
-   margin: 14px auto;
+   margin: 14px auto; 
 
 }
 .loading{
@@ -39,9 +39,16 @@
     justify-content: center;
     padding: 10px 0;
     font-size: 24px;
-    background-color: #116feb;
+    background-color: rgb(21, 20, 20);
     text-decoration: none;
-    color: #fff;
+    color: white;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+
+@media (max-width: 600px){
+    .list-movies{
+        width:400px; 
+    }
 }

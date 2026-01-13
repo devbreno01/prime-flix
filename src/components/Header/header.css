@@ -3,23 +3,32 @@ header{
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 60px;
-    background-color: #000000;
+    height: 70px;
+    background-color: black;
 }
 
 .logo{
     text-decoration: none;
     font-size: 30px;
     cursor: pointer;
-    color: #fff;
+    color: #CD853F;
     font-weight: bold;
 }
 
 .favorites{
     text-decoration: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: none;
     padding: 5px 14px;
-    color: #000000;
+    color: white;
     border-radius: 4px;
+   
+} 
+.favorites:hover{
+    scale: 0.95
+}
+
+
+.logo:hover{
+    scale: 0.95
 }

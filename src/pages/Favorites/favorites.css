@@ -11,6 +11,7 @@
 }
 .movies span{
     font-size: 18px;
+    
 }
 
 .movies ul{
@@ -33,4 +34,23 @@
     text-decoration: none;
     color: #116feb; 
     margin-right: 14px;
+}
+
+.delete{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: none;
+    padding: 5px 14px;
+    color: black;
+    border-radius: 4px;
+    border: none;
+}
+@media (max-width: 600px){
+ .movies ul{
+    width: 350px;
+ }
+
+ .movies span{
+    width: 150px;
+ }
 }
