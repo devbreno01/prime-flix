@@ -3,6 +3,8 @@
 > **Projeto de Estudo** - Site para visualização de filmes em cartaz, desenvolvido com React e JavaScript.
 
 Este é um projeto de estudo que exibe filmes atualmente em cartaz, permitindo ao usuário visualizar detalhes dos filmes e salvar seus favoritos.
+## Link do projeto:
+- https://prime-flix-pink.vercel.app/
 
 ## 📋 Pré-requisitos
 
