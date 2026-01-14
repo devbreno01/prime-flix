@@ -18,7 +18,7 @@ Antes de começar, você precisa ter instalado em sua máquina:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/prime-flix.git
+git clone https://github.com/devbreno01/prime-flix.git
 ```
 
 ### 2. Entrar na pasta do projeto
